@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Instrucciones
+
+1. Crear app con CLI[Angular CLI](https://github.com/angular/angular-cli): `ng new link-directive` 
+2. Agregar Router `app-routing.module.ts`
+3. Crear dos componentes que seran nuestras páginas donde se moveran los links: 
+    `ng generate componets first-page`
+    `ng generate componets second-page`
+4. Agregar navegador al componente principal: `app.component.html`
+    ```
+    <nav>
+      <ul>
+        <li><a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+        <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+        <li><a href="https://www.google.com" appExternalLink>External link</a></li>
+      </ul>
+    </nav>
+    ```
+5. Crear la directiva `ng generate directive directives/external-link`
